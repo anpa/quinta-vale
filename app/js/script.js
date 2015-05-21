@@ -1,20 +1,23 @@
+$(window).load( function() {
+	$("body").fadeIn(2000);
+});
+
+$(window).unload( function() {
+	//$("html").fadeOut(5000);
+	//TODO
+});
+
 $(document).ready(function() {
 
 	$(".menu-puller").click(function(){
 		console.log("ola");
-		$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+		$("html, body").animate({ scrollTop: $(document).height() }, 2000);
 	});
 
-	$(".logo").click(function() {
-		$("#home").show();
-		$("#farm").hide();
-		$("html, body").scrollTop(0);
-	});
+	$(".toggle-nav").click(function() {
+		$(".nav-menu").slideToggle("slow")
+	})
 
-	$(".farm-link").click(function() {
-		$("#home").hide();
-		$("#farm").show();
-		$("html, body").scrollTop(0);
-	});
+
 
 });
