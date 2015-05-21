@@ -1,3 +1,5 @@
+$breakpoint: 40rem;
+
 $primary-color: #585858; //gray
 $secondary-color: #d1c2b0; //orange
 $page-menu-color: #f9f9f9;
@@ -9,37 +11,55 @@ $header-font: "Times New Roman", Times, serif;
 $menu-font: Verdana, Geneva, sans-serif;
 $main-font: Arial, Helvetica, sans-serif;
 
+/* ELEMENTS */
+
 body {
-	margin: 20px 0;
+	display: none;
+	margin: 0;
 	font-family: $main-font;
 	font-size: 13px;
 }
 
-/*
+@media (min-width: $breakpoint) {
+
+body {
+	margin: 20px 0;
+}
+
+}
+
+/* ELEMENTS */
+
+
+/* HEADER */
+
 header {
 
-	.logo {
-		background-color: red;
-		height: 100px;
-		display: inline-block;
+	.row {
+		margin: 0;
+		width: 100%;
+	}
 
-		img {
-			width: 100%;
-		}
+	.logo {
+		float: left;
+		padding-left: 5%;
 	}
 
 	.toggle-nav {
-		display: inline-block;
-		background-color: orange;
+		float: right;
+		font-size: 33px;
+		height: 100px;
+		width: 100px;
 
 		a {
+			background-color: $page-menu-color;
+			height: 100%;
 			display: block;
-			text-align: right;
+			margin: 0 auto;
+			padding: 31px 0;
+			text-align: center;
+			color: $text-dark;
 		}
-	}
-
-	.toggle-nav:after {
-		clear: both;
 	}
 
 	nav.nav-closed {
@@ -65,44 +85,99 @@ header {
 			li a{
 				display: inline-block;
 				width: 100%;
-				padding: 10px 0;
+				padding: 20px 0;
 				text-decoration: none;
+				
+
+				span.en {
+					color: $text-light;
+				}
+
+				span.pt {
+					color: $text-dark;
+				}
 			}
 
 			li a:hover {
-				background-color: red;
+				background-color: $page-menu-color;
 			}
-
 		}
 	}
 }
-*/
+
+
+@media (min-width: $breakpoint) {
+
+header {
+	padding-bottom: 15px;
+
+	.row {
+		margin: 0 auto;
+    	width: 90%;
+	}
+
+	.logo {
+		width: 100%;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	nav.nav-menu, nav.nav-open, nav.nav-closed, .toggle-nav {
+		display: none !important;
+	}
+}
+
+}
+
+/* HEADER */
+
+
+/* HOME */
+
+#home-menu {
+	display: none;
+}
+
+#home-banner {
+	position: fixed;
+	background-image: url('/quinta-vale/img/bg.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #464646;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+    max-width: 1214px;
+}
+
+#home-footer {
+	width: 100%;
+	background-color: white;
+	height: 3%;
+	position: fixed;
+	bottom: 0;
+}
+
+
+@media (min-width: $breakpoint) {
 
 #home-header {
 	background-color: white;
 	position: fixed;
 	width: 100%;
 	z-index:1000;
-	padding-bottom: 15px;
 }
 
 #home-banner {
-	position: fixed;
-
-	background-image: url('../img/bg.png');
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #464646;
-	
-	height: 100%;
-
 	margin: 0 5%;
 	width: 90%;
-    max-width: 1214px;
-
 }
+
 
 span.number, .section-title {
 	font-family: "Times New Roman", Georgia, Serif;
@@ -110,6 +185,7 @@ span.number, .section-title {
 
 
 #home-menu {
+	display: block;
 	position: absolute;
 	top: 90%;
 	height: 83%;
@@ -185,103 +261,15 @@ span.number, .section-title {
 	}	
 }
 
-
-
-
-#home-footer {
-	width: 100%;
-	background-color: white;
-	height: 3%;
-	position: fixed;
-	bottom: 0;
 }
 
-/*
-#home-menu {
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+/* HOME */
 
-	.menu-puller {
-		width: 0; 
-		height: 0; 
-		border-left: 30px solid transparent;
-		border-right: 30px solid transparent;
-		border-bottom: 30px solid rgba(255,255,255,0.5);
-		margin: 0 auto;
-		cursor: pointer;
-	}
-
-	.menu-container{
-		background-color: rgba(255,255,255,0.5);
-		height: 100%;
-		width: 100%;
-
-		ul {
-			position: relative;
-			top: 50%;
-			-webkit-transform: translateY(-50%);
-			-ms-transform: translateY(-50%);
-			transform: translateY(-50%);
-
-			li a {
-				span {
-					display: inline-block;
-				}
-
-				span.pt {
-					width: 45%;
-					text-align: right;
-					text-transform: uppercase;
-				}
-
-				span.number {
-					width: 8%;
-					text-align: center;
-					font-size: 2rem;
-					color: gray;
-				}
-
-				span.en {
-					width: 45%;
-					text-align: left;
-					text-transform: uppercase;
-				}
-			}
-
-			li:hover {
-				background-color: rgba(255,255,255,0.8);
-
-				span, span.number {
-					color: $secondary-color;
-				}
-			}
-		}
-	}	
-}
-
-
-*/
-
-
-
-header {
-	.logo img{
-		display: block;
-		margin: 0 auto;
-	}
-
-	nav, .toggle-nav {
-		display: none;
-	}
-}
-
-
-
+/* PAGES */
 
 .banner-page {
-	margin-top: 15px;
+	margin: 0;
+	width: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -290,7 +278,20 @@ header {
 }
 
 #farm-banner {
-	background-image: url('../img/bg.png');
+	background-image: url('/quinta-vale/img/bg.png');
+}
+
+.page-menu {
+	display: none;
+}
+
+
+@media (min-width: $breakpoint) {
+
+.banner-page {
+	margin: 0 5%;
+	width: 90%;
+	margin-top: 15px;
 }
 
 .main-container {
@@ -298,6 +299,7 @@ header {
 }
 
 .page-menu {
+	display: block;
 	background-color: $page-menu-color;
 	height: 100%;
 	font-family: $menu-font;
@@ -334,6 +336,9 @@ header {
 		}
 	}
 }
+
+}
+
 
 .page-container {
 	background-color: white;
