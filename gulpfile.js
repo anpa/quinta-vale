@@ -7,6 +7,7 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync');
+var fileinclude = require('gulp-file-include');
 var reload = browserSync.reload;
 
 
@@ -20,6 +21,13 @@ gulp.task('sass', function () {
         .pipe(reload({ stream:true }));
 });
 
+//compile partials
+gulp.task('templates', function() {
+  gulp.src(['app/templates/*.html'])
+    .pipe(fileinclude())
+    .pipe(gulp.dest('app'));
+});
+
 //start server
 gulp.task('server', function() {
   browserSync({
@@ -31,9 +39,11 @@ gulp.task('server', function() {
 });
 
 //run project
-gulp.task('start', ['sass', 'server']);
+gulp.task('start', ['sass', 'templates', 'server']);
 
 //update css
 gulp.watch('app/css/*.scss', ['sass']);
+//update html
+gulp.watch('app/templates/**/*.html', ['templates']);
 //live reload
 gulp.watch(['*.html', 'app/css/**/*.css', 'app/js/**/*.js'], {cwd: 'app'}, reload);
