@@ -7,116 +7,148 @@
   <meta name="author" content="">
   <title>Quinta Vale do Conde</title>
   <!-- styles -->
-  <link rel="stylesheet" href="css/normalize.css"/>
-  <link rel="stylesheet" href="css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="css/all.css"/>
+  <link rel="stylesheet" href="../css/normalize.css"/>
+  <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../css/magnific-popup.css"/>
+  <link rel="stylesheet" href="../css/all.css"/>
 </head>
 
 <body>
-  <header id="home-header">
+  <header>
     <div class="row">
-      <div class="logo"><a href="/quinta-vale"><img src="/quinta-vale/img/logo.png"/></a></div>
-      <div class="toggle-nav"><a href="#" id="toggle-nav"><i class="fa fa-bars"></i></a></div>
-    </div>
-    <nav class="nav-menu nav-closed">
-      <ul>
-        <li class="active">
-          <a href="/quinta-vale/html/farm.html">
-            <span class="pt">A Quinta</span>
-            <span class="en">The Farm</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/bottle.html">
-            <span class="pt">Garrafa Dorica 500 ml</span>
-            <span class="en">Dorica 500 ml Bottle</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/special-edition.html">
-            <span class="pt">Edição Especial</span>
-            <span class="en">Special Edition</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/awards.html">
-            <span class="pt">Os Prémios</span>
-            <span class="en">The Awards</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/news.html">
-            <span class="pt">Notícias & Vídeos</span>
-            <span class="en">News & Videos</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/contacts.html">
-            <span class="pt">Contactos</span>
-            <span class="en">Contacts</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+	<div class="logo"><a href="/"><img class="web" src="/img/logo.png"/><img class="mobile" src="/img/logo_mobile.png"/></a></div>
+	<div class="toggle-nav"><a href="#" id="toggle-nav"><i class="fa fa-bars"></i></a></div>
+</div>
+<nav class="nav-menu nav-closed">
+	<ul class="menu">
+	<li>
+		<a class="transition" href="/farm.html">
+			<span class="pt">A Quinta</span>
+			<span class="en">The Farm</span>
+		</a>
+	</li>
+	<li>
+		<a class="toggle-submenu" href="javascript:void(0)">
+			<span class="pt">O Azeite QVC</span>
+			<span class="en">The QVC Olive Oil</span>
+		</a>
+		<ul class="submenu">
+			<li>
+				<a class="transition" href="/bottle.html">
+					<span class="pt">Garrafa Dorica 500 ml</span>
+					<span class="en">Dorica 500 ml Bottle</span>
+				</a>
+			</li>
+			<li class="active">
+				<a class="transition" href="/special-edition.html">
+					<span class="pt">Edição Especial</span>
+					<span class="en">Special Edition</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a class="transition" href="/awards.html">
+			<span class="pt">Os Prémios</span>
+			<span class="en">The Awards</span>
+		</a>
+	</li>
+	<li>
+		<a class="transition" href="/news.html">
+			<span class="pt">Notícias & Vídeos</span>
+			<span class="en">News & Videos</span>
+		</a>
+	</li>
+	<li>
+		<a class="transition" href="/contacts.html">
+			<span class="pt">Contactos</span>
+			<span class="en">Contacts</span>
+		</a>
+	</li>
+</ul>
+</nav>
   </header>
   
-  <div id="home-banner" class="row"></div>
+  <div id="home-banner" class="row">
+
+    <div id="home-background">
+      <img src="/img/bg1.png">
+      <img src="/img/bg2.jpg">
+      <img src="/img/bg3.jpg">
+      <img src="/img/bg4.jpg">
+      <img src="/img/bg5.jpg">
+      <img src="/img/bg6.jpg">
+      <img src="/img/bg7.jpg">
+    </div>
   
-  <div id="home-menu" class="row">
-    <div class="menu-puller"></div>
-    <div class="menu-container">
-      <ul>
-        <li>
-          <a href="/quinta-vale/html/farm.html">
-            <span class="pt">A Quinta</span>
-            <span class="number">01</span>
-            <span class="en">The Farm</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/bottle.html">
-            <span class="pt">Garrafa Dorica 500 ml</span>
-            <span class="number">02</span>
-            <span class="en">Dorica 500 ml Bottle</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/special-edition.html">
-            <span class="pt">Edição Especial</span>
-            <span class="number">03</span>
-            <span class="en">Special Edition</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/awards.html">
-            <span class="pt">Prémios Nacionais & Internacionais</span>
-            <span class="number">04</span>
-            <span class="en">National & International Awards</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/news.html">
-            <span class="pt">Notícias & Vídeos</span>
-            <span class="number">05</span>
-            <span class="en">News & Videos</span>
-          </a>
-        </li>
-        <li>
-          <a href="/quinta-vale/html/contacts.html">
-            <span class="pt">Localização & Contactos</span>
-            <span class="number">06</span>
-            <span class="en">Location & Contacts</span>
-          </a>
-        </li>
-      </ul>
+    <div id="home-menu" class="row">
+      <div class="menu-puller"></div>
+      <div class="menu-container">
+        <ul class="menu">
+          <li>
+            <a class="transition" href="/farm.html">
+              <span class="pt">A Quinta</span>
+              <span class="number">01</span>
+              <span class="en">The Farm</span>
+            </a>
+          </li>
+          <li>
+            <a class="toggle-submenu" href="javascript:void(0)">
+              <span class="pt">O Azeite QVC</span>
+              <span class="number">02</span>
+              <span class="en">The QVC Olive Oil</span>
+            </a>
+            <ul class="submenu">
+              <li>
+                <a class="transition" href="/bottle.html">
+                  <span class="pt">Garrafa Dorica 500 ml</span>
+                  <span class="number">21</span>
+                  <span class="en">Dorica 500 ml Bottle</span>
+                </a>
+              </li>
+              <li>
+                <a class="transition" href="/special-edition.html">
+                  <span class="pt">Edição Especial</span>
+                  <span class="number">22</span>
+                  <span class="en">Special Edition</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="transition" href="/awards.html">
+              <span class="pt">Prémios Nacionais & Internacionais</span>
+              <span class="number">03</span>
+              <span class="en">National & International Awards</span>
+            </a>
+          </li>
+          <li>
+            <a class="transition" href="/news.html">
+              <span class="pt">Notícias & Vídeos</span>
+              <span class="number">04</span>
+              <span class="en">News & Videos</span>
+            </a>
+          </li>
+          <li>
+            <a class="transition" href="/contacts.html">
+              <span class="pt">Localização & Contactos</span>
+              <span class="number">05</span>
+              <span class="en">Location & Contacts</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <footer id="home-footer"></footer>
 
   <!-- scripts -->
-  <script src="js/jquery.js"></script>
-  <script src="js/script.js"></script>
+  <!-- scripts -->
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/jquery.dotdotdot.min.js"></script>
+<script src="../js/script.js"></script>
 </body>
 
 </html>
