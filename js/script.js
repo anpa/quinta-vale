@@ -56,14 +56,16 @@ $(document).ready(function() {
 	}
 
 	/* HOME SLIDER */
-
 	$('#home-background').vegas({
 		timer: false,
         slides: [
         	{ src: "img/bg1.png" },
             { src: "img/bg2.jpg" },
             { src: "img/bg3.jpg" },
-            { src: "img/bg4.jpg" }
+            { src: "img/bg4.jpg" },
+            { src: "img/bg5.jpg" },
+            { src: "img/bg6.jpg" },
+            { src: "img/bg7.jpg" }
         ]
     });
 

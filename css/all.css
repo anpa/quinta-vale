@@ -479,7 +479,9 @@ header nav.nav-menu ul {
   .footer .left, .footer .right {
     height: 25px;
     line-height: 25px; }
-  .footer .right {
-    text-align: right; }
   .footer img {
     vertical-align: middle; }
+
+@media (min-width: 40rem) {
+  .right {
+    text-align: right; } }
