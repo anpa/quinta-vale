@@ -564,11 +564,13 @@ span.number {
   		line-height: 25px;
   	}
 
-  	.right {
-  		text-align: right;
-  	}
-
   	img {
   		vertical-align: middle;
+  	}
+}
+
+@media (min-width: $breakpoint) {
+  	.right {
+  		text-align: right;
   	}
 }
