@@ -174,8 +174,15 @@ header nav.nav-menu ul {
       color: #949494; }
     header nav.nav-menu ul li a span.pt {
       color: #585858; }
-  header nav.nav-menu ul li a:hover {
+  header nav.nav-menu ul li a:hover,
+  header nav.nav-menu ul li a.active {
     background-color: #f9f9f9; }
+  header nav.nav-menu ul .change-lang {
+    width: 100%; }
+    header nav.nav-menu ul .change-lang a {
+      display: inline-block;
+      width: 49%;
+      color: #585858; }
 
 @media (min-width: 40rem) {
   header {
@@ -211,13 +218,6 @@ header nav.nav-menu ul {
   position: absolute;
   height: 100%;
   width: 100%; }
-  #home-background img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none; }
-  #home-background img:first-child {
-    display: block; }
 
 #home-footer {
   width: 100%;
@@ -402,6 +402,9 @@ header nav.nav-menu ul {
   text-transform: uppercase;
   font-family: CalendasPlus, Times, serif; }
 
+.page-content .light {
+  color: #CACACA; }
+
 .page-column {
   padding-right: 3.5%; }
 
@@ -415,7 +418,10 @@ header nav.nav-menu ul {
   color: #949494; }
 
 .page-side img {
-  width: 100%; }
+  width: 80%; }
+
+.page-side span {
+  color: #CACACA; }
 
 .news {
   margin-bottom: 50px; }

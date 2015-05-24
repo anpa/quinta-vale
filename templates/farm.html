@@ -16,8 +16,15 @@
   <div class="row main-container">
 
   <!-- Menu-->
-    <div class="col-3 page-menu" id="farm-menu">
-      @@include('./partials/_menu.html')
+    <div class="col-3 page-menu">
+      @@include('./partials/_menu.html', {
+        "farm": "active",
+        "bottle": "",
+        "special": "",
+        "awards": "",
+        "news": "",
+        "contacts": ""
+      })
     </div>
 
   <!--Page Container-->
