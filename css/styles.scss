@@ -34,12 +34,6 @@ body {
 	font-size: 13px;
 }
 
-@media (max-width: $breakpoint) {
-	.en {
-		display:none !important;
-	}
-}
-
 /* ELEMENTS */
 
 /* HEADER */
@@ -389,6 +383,10 @@ span.number {
 		padding-top: 10px;
 		list-style: none;
 		text-transform: uppercase;
+
+		li.change-lang {
+			display: none;
+		}
 
 		li a {
 			text-decoration: none;
