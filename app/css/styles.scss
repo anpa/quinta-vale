@@ -8,6 +8,7 @@ $page-menu-color: #f9f9f9;
 
 $text-dark: #585858;
 $text-light: #949494;
+$text-lighter: #CACACA;
 
 $header-font: CalendasPlus, Times, serif;
 $menu-font: Verdana, Geneva, sans-serif;
@@ -112,8 +113,19 @@ header {
 				}
 			}
 
-			li a:hover {
+			li a:hover,
+			li a.active {
 				background-color: $page-menu-color;
+			}
+
+			.change-lang {
+				width: 100%;
+
+				a {
+					display: inline-block;
+					width: 49%;
+					color: $text-dark;
+				}
 			}
 		}
 	}
@@ -173,17 +185,6 @@ header {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		display: none;
-	}
-
-	img:first-child {
-		display: block;
-	}
 }
 
 #home-footer {
@@ -457,6 +458,10 @@ span.number {
 		text-transform: uppercase;
 		font-family: $header-font;
 	}
+
+	.light {
+		color: $text-lighter;
+	}
 }
 
 .page-column {
@@ -477,7 +482,11 @@ span.number {
 
 .page-side {
 	img {
-		width: 100%;
+		width: 80%;
+	}
+
+	span {
+		color: $text-lighter;
 	}
 }
 
