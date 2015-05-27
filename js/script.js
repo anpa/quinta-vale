@@ -1,6 +1,6 @@
 //FADE IN
 $(window).load( function() {
-	$("body").fadeIn(2000);
+	$("body").fadeIn(1000);
 });
 
 //FADE OUT
@@ -72,7 +72,7 @@ $(document).ready(function() {
 	/* EVENT HANDLERS */
 
 	$(".menu-puller").click(function(){
-		$("#home-menu").animate({ "top": "-30px" }, 2000);
+		$("#home-menu").animate({ "top": "-30px" }, 1200);
 	});
 
 	$(".toggle-nav").click(function() {
