@@ -41,6 +41,9 @@ body {
 
 header {
 
+	position: relative;
+  	z-index: 9999;
+
 	.row {
 		margin: 0;
 		width: 100%;
@@ -175,10 +178,12 @@ header {
 
 #home-banner {
 	position: relative;
-	height: 500px;
+	height: 100%;
 	width: 90%;
 	margin: 0 auto;
 	overflow: hidden;
+	margin-top: -95px;
+  	padding-top: 95px;
 }
 
 #home-background {
@@ -205,6 +210,8 @@ header {
 }
 
 #home-banner {
+	margin-top: -160px;
+  	padding-top: 160px;
 }
 
 
@@ -258,9 +265,9 @@ span.number {
 				text-decoration: none;
 				color: $text-dark;
 
-				-webkit-transition: all .2s ease-in;
-				-o-transition: all .2s ease-in;
-				transition: all .2s ease-in;
+				-webkit-transition: background-color .5s ease-in;
+				-o-transition: background-color .5s ease-in;
+				transition: background-color .5s ease-in;
 
 				span {
 					display: inline-block;
